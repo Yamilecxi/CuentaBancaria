@@ -9,6 +9,7 @@ public class CuentaCorriente extends Cuenta {
     }
     @Override
         public boolean consignar (float cantidad){
+        
         return false;
     }
     @Override

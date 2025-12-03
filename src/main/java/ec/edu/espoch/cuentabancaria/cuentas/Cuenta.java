@@ -14,9 +14,12 @@ protected float comusionMensual = 0;
     }
 
     public boolean consignar (float cantidad){
-        return false;
+        
+    saldo=saldo+cantidad;
+        return true;
     }
     public boolean retirar (float cantidad){
+        if (cantidad  
         return false;
     }
     public void calcularInteres(){

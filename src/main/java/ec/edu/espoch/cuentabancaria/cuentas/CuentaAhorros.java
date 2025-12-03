@@ -11,7 +11,12 @@ public class CuentaAhorros extends Cuenta{
     }
     @Override
         public boolean consignar (float cantidad){
-        return false;
+        
+        boolean resp = false;
+        if (activa){
+            resp=super.consignar(cantidad);
+        }
+        return resp;
     }
     @Override
     public boolean retirar (float cantidad){
