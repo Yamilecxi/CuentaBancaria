@@ -23,7 +23,9 @@ public class CuentaAhorros extends Cuenta{
         return false;
     }
     @Override
-    public void calcularInteres(){
+    public float calcularInteres(){
+    
+        return 0;
     
     }    
     @Override

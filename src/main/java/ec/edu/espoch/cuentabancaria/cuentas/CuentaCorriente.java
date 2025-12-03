@@ -9,7 +9,6 @@ public class CuentaCorriente extends Cuenta {
     }
     @Override
         public boolean consignar (float cantidad){
-        
         return false;
     }
     @Override
@@ -17,7 +16,9 @@ public class CuentaCorriente extends Cuenta {
         return false;
     }
     @Override
-    public void calcularInteres(){
+    public float calcularInteres(){
+    
+        return 0;
     
     }    
     @Override
@@ -31,7 +32,7 @@ public class CuentaCorriente extends Cuenta {
 
     @Override
     public String toString() {
-        return "CuentaCorriente{" + "sobregiro=" + sobregiro + '}';
+        return "CuentaCorriente{" +super.toString()+ "sobregiro=" + sobregiro + '}';
     }
     
 }

@@ -19,16 +19,29 @@ protected float comusionMensual = 0;
         return true;
     }
     public boolean retirar (float cantidad){
-        if (cantidad  
-        return false;
+        boolean respuesta=false;
+        if (cantidad > 0 && saldo >= cantidad){
+        saldo = saldo - cantidad;
+        respuesta = true;
+        }
+    return respuesta;
     }
-    public void calcularInteres(){
+
+    public float calcularInteres(){
+        float tasaMensual = tasaAnual / 12;
+        float interesMensual = saldo*(tasaAnual/100);
+        saldo = interesMensual + saldo;
+        return tasaMensual;
     
     }    
     public void extractoMensual (){
-        
     }
     public void imprimir(){
+        System.out.println("saldo: "+ saldo);
+        System.out.println("consignacion"+ consignaciones);
+        System.out.println("retiros"+retiros);
+        System.out.println("tasa anual"+tasaAnual);
+        
     }
 
     @Override
